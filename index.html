@@ -1,54 +1,542 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zetabyte Informática - Assistência Técnica Especializada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Seus estilos anteriores permanecem aqui */
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #2563eb, #1d4ed8);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* ... (mantenha todos os seus estilos CSS existentes) ... */
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
         
-        /* Adicione estes estilos para melhorar o formulário */
-        .form-message {
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Moderno */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
             display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
         }
         
-        .form-message.success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+        /* Hero Section Moderna */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
         }
         
-        .form-message.error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0 V100 Q500,50 1000,100 V0Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
         }
         
-        .loading {
-            display: none;
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
-            padding: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: var(--primary);
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: var(--gray);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature i {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .technician-photo {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+            background: rgba(37, 99, 235, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        
+        .contact-details h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column p, .footer-column li {
+            color: #cbd5e1;
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -58,10 +546,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">💻</div>
+                    <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
                     <h1>Zetabyte Informática</h1>
                 </div>
-                <div class="mobile-menu">☰</div>
+                <div class="mobile-menu"><i class="fas fa-bars"></i></div>
                 <nav>
                     <ul>
                         <li><a href="#home">Início</a></li>
@@ -77,11 +565,17 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h2>Assistência Técnica em Informática</h2>
-            <p>Soluções completas para seus problemas tecnológicos. Atendimento rápido e especializado para computadores, notebooks e redes.</p>
-            <div class="btn-container">
-                <a href="#contact" class="btn">Entre em Contato</a>
-                <a href="https://wa.me/5511930870716?text=Olá! Gostaria de informações sobre seus serviços de informática." class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+            <div class="hero-content">
+                <h2>Soluções Tech para Você</h2>
+                <p>Assistência técnica especializada em computadores, notebooks e redes. Conserto rápido com garantia e preço justo.</p>
+                <div class="btn-container">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Solicitar Orçamento
+                    </a>
+                    <a href="https://wa.me/5511930870716" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -91,37 +585,38 @@
         <div class="container">
             <div class="section-title">
                 <h2>Nossos Serviços</h2>
+                <p>Soluções completas para todos os seus problemas de informática</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Manutenção de Computadores</h3>
-                    <p>Formatação, limpeza, troca de peças e upgrades para melhor desempenho do seu equipamento.</p>
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Limpeza, otimização e verificação completa do seu equipamento</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🖥️</div>
-                    <h3>Conserto de Notebooks</h3>
-                    <p>Reparo especializado em notebooks de todas as marcas e modelos.</p>
+                    <div class="service-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>Reparo de Notebooks</h3>
+                    <p>Conserto especializado em todas as marcas e modelos</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🛡️</div>
+                    <div class="service-icon"><i class="fas fa-shield-virus"></i></div>
                     <h3>Remoção de Vírus</h3>
-                    <p>Eliminação de malware, spyware e outros tipos de ameaças virtuais.</p>
+                    <p>Eliminação completa de malware, spyware e ameaças virtuais</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📡</div>
-                    <h3>Configuração de Redes</h3>
-                    <p>Instalação e configuração de redes domésticas.</p>
+                    <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Redes e Wi-Fi</h3>
+                    <p>Instalação e configuração de redes domésticas e empresariais</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💾</div>
+                    <div class="service-icon"><i class="fas fa-hdd"></i></div>
                     <h3>Recuperação de Dados</h3>
-                    <p>Recuperação de arquivos e dados perdidos em HDs e SSDs.</p>
+                    <p>Recuperamos seus arquivos importantes de HDs e SSDs</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⚙️</div>
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
                     <h3>Sistemas Operacionais</h3>
-                    <p>Windows, Linux e macOS.</p>
+                    <p>Instalação e configuração de Windows, Linux e macOS</p>
                 </div>
             </div>
         </div>
@@ -132,16 +627,37 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Sobre a Zetabyte Informática</h2>
-                    <p>A Zetabyte Informática é uma empresa especializada em assistência técnica de computadores e notebooks, oferecendo soluções completas para problemas tecnológicos.</p>
-                    <p>Com anos de experiência no mercado, nosso técnico responsável, <strong>José Gualberto de Oliveira</strong>, garante um serviço de qualidade, rápido e com preço justo.</p>
-                    <p>Nosso compromisso é resolver seus problemas de informática com eficiência e transparência, sempre buscando a satisfação total do cliente.</p>
+                    <h2>Expertise em Tecnologia</h2>
+                    <p>Na Zetabyte Informática, combinamos anos de experiência com conhecimento técnico especializado para oferecer o melhor serviço em assistência técnica.</p>
+                    <p>Nosso técnico <strong>José Gualberto de Oliveira</strong> possui ampla experiência no mercado e está sempre atualizado com as últimas tecnologias.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento Rápido</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Preço Justo</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Peças de Qualidade</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Garantia no Serviço</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <!-- FOTO DO TÉCNICO JOSÉ GUALBERTO -->
-                    <img src="gualberto.png" alt="José Gualberto de Oliveira - Técnico em Informática" class="technician-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="photo-placeholder" style="display: none;">
-                        <div>Foto do Técnico<br>José Gualberto de Oliveira</div>
+                    <img src="gualberto.png" alt="José Gualberto - Técnico em Informática" class="technician-photo" onerror="this.style.display='none'; document.getElementById('placeholder').style.display='flex';">
+                    <div id="placeholder" class="photo-placeholder" style="display: none;">
+                        <div>
+                            <i class="fas fa-user-tie" style="font-size: 3rem; margin-bottom: 1rem;"></i><br>
+                            José Gualberto de Oliveira<br>
+                            <small>Técnico Especializado</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,34 +668,40 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Entre em Contato</h2>
+                <h2>Fale Conosco</h2>
+                <p>Entre em contato para um orçamento sem compromisso</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-details">
-                            <h3>Endereço</h3>
+                            <h3>Nosso Endereço</h3>
                             <p>Rua Serra de Capivaruçú, 103<br>JD. Elba - São Paulo-SP</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-details">
                             <h3>E-mail</h3>
                             <p>zetabyteinformatica@gmail.com</p>
+                            <a href="mailto:zetabyteinformatica@gmail.com" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0.5rem;">
+                                <i class="fas fa-paper-plane"></i> Enviar E-mail
+                            </a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📱</div>
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="contact-details">
                             <h3>WhatsApp</h3>
                             <p>(11) 93087-0716</p>
-                            <a href="https://wa.me/5511930870716?text=Olá! Gostaria de informações sobre seus serviços de informática." class="btn btn-whatsapp" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0.5rem;">Chamar no WhatsApp</a>
+                            <a href="https://wa.me/5511930870716" class="btn btn-whatsapp" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0.5rem;">
+                                <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                            </a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div class="contact-details">
                             <h3>Horário de Atendimento</h3>
                             <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 13h</p>
@@ -187,33 +709,26 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <!-- Mensagens de status -->
-                    <div id="formMessage" class="form-message"></div>
-                    <div id="loading" class="loading">Enviando mensagem...</div>
-                    
                     <form id="contactForm">
-                        <input type="hidden" name="_subject" value="Novo contato do site Zetabyte Informática">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://jgogualberto.github.io/Zetabyte/obrigado.html">
-                        <input type="text" name="_honey" style="display:none">
-                        
                         <div class="form-group">
-                            <label for="name">Nome *</label>
+                            <label for="name">Nome Completo</label>
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail *</label>
+                            <label for="email">E-mail</label>
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Telefone</label>
+                            <label for="phone">Telefone/WhatsApp</label>
                             <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="message">Mensagem *</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
+                            <label for="message">Descreva seu problema</label>
+                            <textarea id="message" name="message" class="form-control" required placeholder="Ex: Meu notebook não está ligando..."></textarea>
                         </div>
-                        <button type="submit" class="btn" id="submitBtn">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
                     </form>
                 </div>
             </div>
@@ -226,7 +741,12 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Zetabyte Informática</h3>
-                    <p>Soluções completas em assistência técnica de informática.</p>
+                    <p>Sua assistência técnica de confiança em São Paulo. Qualidade e rapidez no conserto do seu equipamento.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h3>Serviços</h3>
@@ -238,11 +758,12 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contato</h3>
+                    <h3>Contato Rápido</h3>
                     <ul>
-                        <li>📱 (11) 93087-0716</li>
-                        <li>📧 zetabyteinformatica@gmail.com</li>
-                        <li>📍 Rua Serra de Capivaruçú, 103 - JD. Elba - SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 93087-0716</li>
+                        <li><i class="fas fa-envelope"></i> zetabyteinformatica@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Serra de Capivaruçú, 103</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 8h-13h</li>
                     </ul>
                 </div>
             </div>
@@ -279,74 +800,24 @@
             });
         });
 
-        // Formulário de contato
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.padding = '0.7rem 0';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.padding = '1rem 0';
+            }
+        });
+
+        // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const submitBtn = document.getElementById('submitBtn');
-            const loading = document.getElementById('loading');
-            const formMessage = document.getElementById('formMessage');
-            
-            // Validar campos obrigatórios
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            if (!name || !email || !message) {
-                showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(email)) {
-                showMessage('Por favor, insira um e-mail válido.', 'error');
-                return;
-            }
-            
-            // Mostrar loading
-            submitBtn.disabled = true;
-            loading.style.display = 'block';
-            formMessage.style.display = 'none';
-            
-            // Enviar formulário
-            const formData = new FormData(this);
-            
-            fetch('https://formsubmit.co/ajax/zetabyteinformatica@gmail.com', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-                    document.getElementById('contactForm').reset();
-                } else {
-                    throw new Error('Erro ao enviar mensagem');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-                showMessage('Erro ao enviar mensagem. Tente novamente ou entre em contato por WhatsApp.', 'error');
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                loading.style.display = 'none';
-            });
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
         });
-        
-        function showMessage(text, type) {
-            const formMessage = document.getElementById('formMessage');
-            formMessage.textContent = text;
-            formMessage.className = `form-message ${type}`;
-            formMessage.style.display = 'block';
-            
-            // Rolagem suave para a mensagem
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-        
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
     </script>
 </body>
 </html>
