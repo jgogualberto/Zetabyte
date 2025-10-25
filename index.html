@@ -1,1 +1,352 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetabyte Informática - Assistência Técnica Especializada</title>
+    <style>
+        /* Seus estilos anteriores permanecem aqui */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* ... (mantenha todos os seus estilos CSS existentes) ... */
+        
+        /* Adicione estes estilos para melhorar o formulário */
+        .form-message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">💻</div>
+                    <h1>Zetabyte Informática</h1>
+                </div>
+                <div class="mobile-menu">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Assistência Técnica em Informática</h2>
+            <p>Soluções completas para seus problemas tecnológicos. Atendimento rápido e especializado para computadores, notebooks e redes.</p>
+            <div class="btn-container">
+                <a href="#contact" class="btn">Entre em Contato</a>
+                <a href="https://wa.me/5511930870716?text=Olá! Gostaria de informações sobre seus serviços de informática." class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Manutenção de Computadores</h3>
+                    <p>Formatação, limpeza, troca de peças e upgrades para melhor desempenho do seu equipamento.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🖥️</div>
+                    <h3>Conserto de Notebooks</h3>
+                    <p>Reparo especializado em notebooks de todas as marcas e modelos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Remoção de Vírus</h3>
+                    <p>Eliminação de malware, spyware e outros tipos de ameaças virtuais.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📡</div>
+                    <h3>Configuração de Redes</h3>
+                    <p>Instalação e configuração de redes domésticas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💾</div>
+                    <h3>Recuperação de Dados</h3>
+                    <p>Recuperação de arquivos e dados perdidos em HDs e SSDs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Sistemas Operacionais</h3>
+                    <p>Windows, Linux e macOS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a Zetabyte Informática</h2>
+                    <p>A Zetabyte Informática é uma empresa especializada em assistência técnica de computadores e notebooks, oferecendo soluções completas para problemas tecnológicos.</p>
+                    <p>Com anos de experiência no mercado, nosso técnico responsável, <strong>José Gualberto de Oliveira</strong>, garante um serviço de qualidade, rápido e com preço justo.</p>
+                    <p>Nosso compromisso é resolver seus problemas de informática com eficiência e transparência, sempre buscando a satisfação total do cliente.</p>
+                </div>
+                <div class="about-image">
+                    <!-- FOTO DO TÉCNICO JOSÉ GUALBERTO -->
+                    <img src="gualberto.png" alt="José Gualberto de Oliveira - Técnico em Informática" class="technician-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="photo-placeholder" style="display: none;">
+                        <div>Foto do Técnico<br>José Gualberto de Oliveira</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Endereço</h3>
+                            <p>Rua Serra de Capivaruçú, 103<br>JD. Elba - São Paulo-SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>E-mail</h3>
+                            <p>zetabyteinformatica@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>(11) 93087-0716</p>
+                            <a href="https://wa.me/5511930870716?text=Olá! Gostaria de informações sobre seus serviços de informática." class="btn btn-whatsapp" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0.5rem;">Chamar no WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- Mensagens de status -->
+                    <div id="formMessage" class="form-message"></div>
+                    <div id="loading" class="loading">Enviando mensagem...</div>
+                    
+                    <form id="contactForm">
+                        <input type="hidden" name="_subject" value="Novo contato do site Zetabyte Informática">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://jgogualberto.github.io/Zetabyte/obrigado.html">
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <div class="form-group">
+                            <label for="name">Nome *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" id="submitBtn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Zetabyte Informática</h3>
+                    <p>Soluções completas em assistência técnica de informática.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#services">Manutenção de Computadores</a></li>
+                        <li><a href="#services">Conserto de Notebooks</a></li>
+                        <li><a href="#services">Remoção de Vírus</a></li>
+                        <li><a href="#services">Configuração de Redes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>📱 (11) 93087-0716</li>
+                        <li>📧 zetabyteinformatica@gmail.com</li>
+                        <li>📍 Rua Serra de Capivaruçú, 103 - JD. Elba - SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Zetabyte Informática - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fechar menu mobile após clicar
+                    document.querySelector('nav ul').classList.remove('active');
+                }
+            });
+        });
+
+        // Formulário de contato
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const loading = document.getElementById('loading');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Validar campos obrigatórios
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (!name || !email || !message) {
+                showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                showMessage('Por favor, insira um e-mail válido.', 'error');
+                return;
+            }
+            
+            // Mostrar loading
+            submitBtn.disabled = true;
+            loading.style.display = 'block';
+            formMessage.style.display = 'none';
+            
+            // Enviar formulário
+            const formData = new FormData(this);
+            
+            fetch('https://formsubmit.co/ajax/zetabyteinformatica@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                    document.getElementById('contactForm').reset();
+                } else {
+                    throw new Error('Erro ao enviar mensagem');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                showMessage('Erro ao enviar mensagem. Tente novamente ou entre em contato por WhatsApp.', 'error');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                loading.style.display = 'none';
+            });
+        });
+        
+        function showMessage(text, type) {
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = text;
+            formMessage.className = `form-message ${type}`;
+            formMessage.style.display = 'block';
+            
+            // Rolagem suave para a mensagem
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
