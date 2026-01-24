@@ -1,21 +1,21 @@
 const products = [
     {
-        name: "Computador Core i5",
-        price: "R$ 799,00",
+        name: "Processador Intel Core i5 11ª geração",
+        price: "R$ 550,00",
         image: "https://via.placeholder.com/300x200",
-        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20no%20Computador%20Core%20i5"
+        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20no%20Processador i5"
     },
     {
-        name: "HD 500GB Usado",
-        price: "R$ 60,00",
+        name: "HD 1 TB Usado",
+        price: "R$ 150,00",
         image: "https://via.placeholder.com/300x200",
-        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20no%20HD%20500GB"
+        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20no%20HD"
     },
     {
-        name: "Fonte ATX 500W",
-        price: "R$ 70,00",
+        name: "Mem RAM DDR4 2666 ghz 8GB",
+        price: "R$ 250,00",
         image: "https://via.placeholder.com/300x200",
-        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20na%20Fonte%20500W"
+        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20na%Memoria RAM"
     }
 ];
 
