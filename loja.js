@@ -3,19 +3,19 @@ const products = [
         name: "Processador Intel Core i5 11ª geração",
         price: "R$ 550,00",
         image: "https://via.placeholder.com/300x200",
-        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20no%20Processador i5"
+        link: "https://wa.me/5511930870716?text=Tenho interesse no Processador i5"
     },
     {
         name: "HD 1 TB Usado",
         price: "R$ 150,00",
         image: "https://via.placeholder.com/300x200",
-        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20no%20HD"
+        link: "https://wa.me/5511930870716?text=Tenho interesse no HD"
     },
     {
         name: "Mem RAM DDR4 2666 ghz 8GB",
         price: "R$ 250,00",
         image: "https://via.placeholder.com/300x200",
-        link: "https://wa.me/5511930870716?text=Tenho%20interesse%20na%Memoria RAM"
+        link: "https://wa.me/5511930870716?text=Tenho interesse na Memoria RAM"
     }
 ];
 
