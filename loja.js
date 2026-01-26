@@ -6,7 +6,7 @@ const products = [
         link: "https://wa.me/5511930870716?text=Tenho interesse no Processador i5"
     },
     {
-        name: "HD 1 TB Usado",
+        name: "HD Seagate Video 3.5 hdd 1000GB",
         price: "R$ 150,00",
         image: "https://via.placeholder.com/300x200",
         link: "https://wa.me/5511930870716?text=Tenho interesse no HD"
