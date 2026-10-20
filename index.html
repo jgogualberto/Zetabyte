@@ -330,21 +330,27 @@ Problema: ${mensagem}`;
                 <p>zetabyteinformatica@gmail.com</p>
             </div>
         </div>
-        <form id="contactForm" action="https://formsubmit.co/zetabyteinformatica@gmail.com" method="POST">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="hidden" name="_subject" value="Novo pedido de orçamento - Site Zetabyte">
-    <input type="hidden" name="_captcha" value="false">
+    <!-- ===== Configurações do Web3Forms ===== -->
+    <input type="hidden" name="access_key" value="0bd66fe6-62fa-4652-8cca-37cac6fd2a46">
+    <input type="hidden" name="subject" value="Novo pedido de orçamento - Site Zetabyte">
+    <input type="hidden" name="from_name" value="Site Zetabyte">
 
+    <!-- Anti-spam (honeypot invisível) -->
+    <input type="checkbox" name="botcheck" style="display:none">
+
+    <!-- ===== Campos do formulário ===== -->
     <div class="form-group">
-        <input type="text" id="nome" name="Nome" class="form-control" placeholder="Seu nome" required>
+        <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
     </div>
 
     <div class="form-group">
-        <input type="email" id="email" name="Email" class="form-control" placeholder="Seu email" required>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Seu email" required>
     </div>
 
     <div class="form-group">
-        <textarea id="mensagem" name="Mensagem" class="form-control" placeholder="Descreva seu problema" required></textarea>
+        <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Descreva seu problema" required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary" style="width:100%;">
