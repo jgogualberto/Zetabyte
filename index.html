@@ -1,404 +1,451 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SYFTK70KD4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d6efd">
+  <meta name="description" content="Zetabyte Informática: assistência técnica em computadores e notebooks no Jardim Elba, São Paulo. Manutenção, limpeza técnica, upgrade com SSD e memória RAM e instalação de sistemas.">
+  <meta name="author" content="Zetabyte Informática">
+  <meta property="og:title" content="Zetabyte Informática | Assistência Técnica">
+  <meta property="og:description" content="Manutenção de computadores e notebooks no Jardim Elba, São Paulo. Entre em contato para solicitar um orçamento.">
+  <meta property="og:type" content="website">
+  <title>Zetabyte Informática | Assistência Técnica em Computadores</title>
 
-  gtag('config', 'G-SYFTK70KD4');
-</script>
- 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<title>Zetabyte Informática | Assistência Técnica em Computadores</title>
-<meta name="description" content="Assistência técnica especializada em computadores no Jardim Elba - São Paulo. Manutenção, formatação, limpeza, recuperação de dados e venda de peças usadas.">
-<meta name="author" content="Zetabyte Informática">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<style>
-:root{
-    --primary:#0d6efd;
-    --dark:#111827;
-    --light:#f8fafc;
-    --gray:#6b7280;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:var(--light);
-    color:var(--dark);
-    line-height:1.6;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* HEADER */
-header{
-    background:#fff;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-}
-
-.header-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:1rem 0;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo-icon{
-    font-size:1.5rem;
-    color:var(--primary);
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    text-decoration:none;
-    color:var(--dark);
-    font-weight:600;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:var(--primary);
-}
-
-/* HERO */
-.hero{
-    background:linear-gradient(135deg,var(--primary),#1e3a8a);
-    color:#fff;
-    padding:150px 0 100px;
-    text-align:center;
-}
-
-.hero h2{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:#fff;
-    color:var(--primary);
-}
-
-.btn-primary:hover{
-    background:#e5e7eb;
-}
-
-.btn-whatsapp{
-    background:#25D366;
-    color:#fff;
-    margin-left:10px;
-}
-
-.btn-whatsapp:hover{
-    opacity:0.9;
-}
-
-/* SECTIONS */
-section{
-    padding:80px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-/* SERVICES */
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.service-card{
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-5px);
-}
-
-.service-icon{
-    font-size:2rem;
-    color:var(--primary);
-    margin-bottom:15px;
-}
-
-/* CONTACT */
-.contact-content{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
-}
-
-.contact-item{
-    margin-bottom:20px;
-}
-
-.contact-item h3{
-    margin-bottom:5px;
-}
-
-.form-group{
-    margin-bottom:15px;
-}
-
-.form-control{
-    width:100%;
-    padding:10px;
-    border:1px solid #ddd;
-    border-radius:5px;
-}
-
-textarea{
-    min-height:120px;
-}
-
-/* FOOTER */
-footer{
-    background:var(--dark);
-    color:#fff;
-    text-align:center;
-    padding:20px 0;
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-    nav ul{
-        flex-direction:column;
-        gap:10px;
+  <style>
+    :root {
+      color-scheme: light;
+      --primary: #0d6efd;
+      --primary-dark: #084298;
+      --dark: #111827;
+      --muted: #5b6472;
+      --light: #f5f8fc;
+      --white: #fff;
+      --border: #e2e8f0;
+      --whatsapp: #128c4a;
+      --shadow: 0 12px 32px rgba(17, 24, 39, .08);
+      --radius: 16px;
     }
 
-    .hero h2{
-        font-size:2rem;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--dark);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
     }
-}
-</style>
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; }
+    img { max-width: 100%; height: auto; }
+    .container { width: min(1120px, 92%); margin-inline: auto; }
+    .skip-link {
+      position: absolute; left: -9999px; top: 10px; z-index: 2000;
+      background: #fff; color: #111; padding: 10px 14px; border-radius: 8px;
+    }
+    .skip-link:focus { left: 10px; }
+    .site-header {
+      position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(226,232,240,.9); backdrop-filter: blur(12px);
+    }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; min-width: 0; }
+    .brand-icon {
+      display: grid; place-items: center; flex: 0 0 44px; height: 44px; border-radius: 12px;
+      background: var(--primary); color: #fff; font-size: 1.25rem;
+    }
+    .brand-name { font-size: 1.05rem; line-height: 1.2; font-weight: 800; letter-spacing: -.025em; }
+    .brand-caption { display: block; color: var(--muted); font-size: .76rem; font-weight: 500; margin-top: 3px; }
+    .site-nav ul { display: flex; align-items: center; gap: 26px; list-style: none; padding: 0; margin: 0; }
+    .site-nav a { text-decoration: none; font-size: .94rem; font-weight: 700; }
+    .site-nav a:hover, .site-nav a:focus-visible { color: var(--primary); }
+    .menu-toggle {
+      display: none; border: 1px solid var(--border); background: #fff; color: var(--dark);
+      width: 44px; height: 44px; border-radius: 10px; font-size: 1.2rem; cursor: pointer;
+    }
+    .hero {
+      position: relative; overflow: hidden; color: #fff;
+      background: radial-gradient(circle at 85% 15%, rgba(255,255,255,.18), transparent 28%),
+                  linear-gradient(130deg, #0d6efd 0%, #1649a6 58%, #102d67 100%);
+      padding: clamp(64px, 9vw, 112px) 0;
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(250px, .7fr); gap: 48px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .86rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #e0ecff; }
+    .hero h1 { font-size: clamp(2.25rem, 5vw, 3.65rem); line-height: 1.1; letter-spacing: -.045em; margin: 16px 0; max-width: 760px; }
+    .hero p { color: #eaf1ff; font-size: clamp(1.05rem, 2vw, 1.2rem); max-width: 650px; margin: 0 0 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center; gap: 9px;
+      min-height: 48px; padding: 12px 20px; border: 2px solid transparent; border-radius: 10px;
+      font: inherit; font-weight: 800; text-decoration: none; cursor: pointer; transition: transform .18s, background .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-light { background: #fff; color: #084298; }
+    .btn-light:hover { background: #eaf1ff; }
+    .btn-green { background: var(--whatsapp); color: #fff; }
+    .btn-green:hover { background: #0b713b; }
+    .btn-outline { color: var(--primary); border-color: var(--border); background: #fff; }
+    .hero-panel {
+      border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.10);
+      border-radius: 22px; padding: 26px; backdrop-filter: blur(8px);
+    }
+    .hero-panel h2 { font-size: 1.2rem; margin: 0 0 14px; }
+    .hero-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .hero-list li { display: flex; gap: 10px; align-items: flex-start; color: #f4f7ff; }
+    .hero-list i { margin-top: 5px; color: #bfe6ff; }
+    section { padding: clamp(56px, 7vw, 84px) 0; }
+    .section-heading { text-align: center; max-width: 700px; margin: 0 auto 38px; }
+    .section-heading h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); letter-spacing: -.03em; line-height: 1.2; margin: 0 0 12px; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .services-section { background: var(--light); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .service-card {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 25px;
+      box-shadow: 0 4px 14px rgba(17,24,39,.025); transition: transform .2s, box-shadow .2s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 13px; background: #eaf2ff; color: var(--primary); font-size: 1.3rem; margin-bottom: 16px; }
+    .service-card h3 { font-size: 1.08rem; margin: 0 0 8px; }
+    .service-card p { color: var(--muted); margin: 0; font-size: .96rem; }
+    .process-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+    .process-step { padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); }
+    .step-number { display: grid; place-items: center; width: 40px; height: 40px; background: var(--primary); color: #fff; border-radius: 12px; font-weight: 800; margin-bottom: 15px; }
+    .process-step h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .process-step p { margin: 0; color: var(--muted); }
+    .contact-section { background: var(--light); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: start; }
+    .contact-card, .form-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(22px, 4vw, 32px); box-shadow: 0 5px 18px rgba(17,24,39,.035); }
+    .contact-card h3, .form-card h3 { margin: 0 0 18px; font-size: 1.35rem; }
+    .contact-detail { display: flex; gap: 13px; margin: 18px 0; align-items: flex-start; }
+    .contact-detail i { width: 22px; margin-top: 5px; color: var(--primary); text-align: center; }
+    .contact-detail strong { display: block; }
+    .contact-detail p { margin: 2px 0 0; color: var(--muted); overflow-wrap: anywhere; }
+    .contact-detail a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .form-intro { color: var(--muted); margin: -8px 0 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; margin-bottom: 6px; font-weight: 700; font-size: .92rem; }
+    .form-control {
+      display: block; width: 100%; min-height: 46px; padding: 11px 13px; border: 1px solid #cbd5e1;
+      border-radius: 9px; background: #fff; color: var(--dark); font: inherit;
+    }
+    .form-control:focus { outline: 3px solid rgba(13,110,253,.18); border-color: var(--primary); }
+    textarea.form-control { min-height: 130px; resize: vertical; }
+    .form-note { color: var(--muted); font-size: .83rem; margin: 10px 0 0; }
+    .form-status { margin-top: 14px; padding: 12px; border-radius: 9px; display: none; }
+    .form-status.visible { display: block; }
+    .form-status.error { background: #fff0f0; color: #8b1e1e; }
+    .form-status.success { background: #eaf8ef; color: #14532d; }
+    .site-footer { background: #0b1220; color: #d7deea; padding: 28px 0; text-align: center; }
+    .site-footer p { margin: 4px 0; font-size: .9rem; }
+    .footer-small { color: #aab6c8; }
+    .whatsapp-float {
+      position: fixed; right: 20px; bottom: 20px; z-index: 900; display: grid; place-items: center;
+      width: 58px; height: 58px; border-radius: 50%; background: #20bd5a; color: #fff;
+      text-decoration: none; font-size: 1.8rem; box-shadow: 0 6px 20px rgba(0,0,0,.22);
+      transition: transform .18s;
+    }
+    .whatsapp-float:hover { transform: scale(1.07); }
+    :focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-panel { max-width: 650px; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .header-inner { min-height: 68px; }
+      .brand-name { font-size: .98rem; }
+      .brand-caption { font-size: .7rem; }
+      .menu-toggle { display: inline-grid; place-items: center; flex: 0 0 44px; }
+      .site-nav {
+        display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 14px 4% 20px;
+        background: #fff; border-bottom: 1px solid var(--border); box-shadow: 0 12px 20px rgba(17,24,39,.08);
+      }
+      .site-nav.open { display: block; }
+      .site-nav ul { align-items: stretch; flex-direction: column; gap: 0; }
+      .site-nav a { display: block; padding: 12px 6px; }
+      .hero { padding: 62px 0 58px; }
+      .hero h1 { font-size: clamp(2.05rem, 9vw, 3rem); }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .services-grid, .process-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 22px; }
+      .whatsapp-float { width: 54px; height: 54px; right: 15px; bottom: 15px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+
+  <!-- Google Analytics: mantenha esta medição se o ID for seu. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SYFTK70KD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SYFTK70KD4');
+  </script>
 </head>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const mensagem = document.getElementById("mensagem").value;
-
-    const texto = `Olá, meu nome é ${nome}.
-Email: ${email}.
-Problema: ${mensagem}`;
-
-    const numero = "5511930870716";
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-    setTimeout(function(){
-        window.open(url, "_blank");
-    }, 1500);
-});
-</script>
-
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<header>
-<div class="container header-content">
-    <div class="logo">
-        <div class="logo-icon"><i class="fas fa-laptop-code"></i></div>
-        <h1>Zetabyte Informática</h1>
-    </div>
-    <nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Zetabyte Informática - página inicial">
+        <span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+        <span>
+          <span class="brand-name">Zetabyte Informática</span>
+          <span class="brand-caption">Assistência técnica</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
         <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#contact">Contato</a></li>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#atendimento">Como funciona</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-    </nav>
-</div>
-</header>
-
-<section class="hero" id="home">
-<div class="container">
-    <h2>Assistência Técnica </h2>
-    <p>Manutenção, formatação, recuperação de dados</p>
-    <a href="#contact" class="btn btn-primary">Solicitar Orçamento</a>
-    <a href="https://wa.me/5511930870716" target="_blank" class="btn btn-whatsapp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-</div>
-</section>
-
-<section class="services" id="services">
-<div class="container">
-    <div class="section-title">
-        <h2>Nossos Serviços</h2>
-        <p>Soluções completas para seus equipamentos</p>
+      </nav>
     </div>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-tools"></i></div>
-            <h3>Manutenção Preventiva</h3>
-            <p>Limpeza, otimização e revisão completa.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-laptop"></i></div>
-            <h3>Reparo de Notebooks</h3>
-            <p>Conserto em todas as marcas.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-hdd"></i></div>
-            <h3>Upgrade- Melhorar o desempenho do PC</h3>
-            <p>Troca de HD por SSD, aumento de Mem RAM </p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-desktop"></i></div>
-            <h3>Instalação de Sistemas</h3>
-            <p>Windows, Linux, MacOS.</p>
-        </div>
-    </div>
-</div>
-</section>
+  </header>
 
-<section class="contact" id="contact">
-<div class="container">
-    <div class="section-title">
-        <h2>Fale Conosco</h2>
-    </div>
-    <div class="contact-content">
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
         <div>
-            <div class="contact-item">
-                <h3>Endereço</h3>
-                <p>Rua Serra de Capivaruçú, 103<br>Jardim Elba - São Paulo</p>
-            </div>
-            <div class="contact-item">
-                <h3>Telefone</h3>
-                <p>(11) 93087-0716</p>
-            </div>
-            <div class="contact-item">
-                <h3>Email</h3>
-                <p>zetabyteinformatica@gmail.com</p>
-            </div>
+          <span class="eyebrow"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jardim Elba · São Paulo - SP</span>
+          <h1>Assistência técnica em computadores e notebooks</h1>
+          <p>Manutenção, limpeza técnica, instalação de sistemas e upgrades para ajudar seu equipamento a funcionar melhor.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="https://wa.me/5511930870716?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Solicitar orçamento
+            </a>
+            <a class="btn btn-green" href="#servicos"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Conhecer serviços</a>
+          </div>
         </div>
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <aside class="hero-panel" aria-label="Principais serviços">
+          <h2>Como podemos ajudar?</h2>
+          <ul class="hero-list">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Diagnóstico e manutenção de computadores</span></li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Upgrade com SSD e memória RAM</span></li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Instalação de Windows e Linux</span></li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Limpeza técnica e manutenção preventiva</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-    <!-- ===== Configurações do Web3Forms ===== -->
-    <input type="hidden" name="access_key" value="0bd66fe6-62fa-4652-8cca-37cac6fd2a46">
-    <input type="hidden" name="subject" value="Novo pedido de orçamento - Site Zetabyte">
-    <input type="hidden" name="from_name" value="Site Zetabyte">
+    <section class="services-section" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Serviços de informática</h2>
+          <p>Atendimento técnico com avaliação do equipamento e orçamento antes da execução do serviço.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Manutenção preventiva</h3>
+            <p>Limpeza técnica, revisão dos componentes e verificações para ajudar a manter o equipamento em boas condições.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Reparo de notebooks</h3>
+            <p>Avaliação de falhas e problemas de funcionamento em notebooks de diferentes marcas e modelos.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Upgrade de desempenho</h3>
+            <p>Instalação ou substituição de SSD e ampliação de memória RAM, conforme a compatibilidade do equipamento.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><i class="fa-brands fa-windows"></i></div>
+            <h3>Instalação de sistemas</h3>
+            <p>Instalação e configuração de Windows e Linux, além de orientação sobre compatibilidade e cópia de segurança.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3>Diagnóstico de defeitos</h3>
+            <p>Verificação de sintomas e testes para ajudar a identificar possíveis causas de falhas no computador.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-hard-drive"></i></div>
+            <h3>Recuperação de dados</h3>
+            <p>Avaliação de mídias e opções de recuperação conforme o estado do dispositivo. O resultado depende do defeito.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <!-- Anti-spam (honeypot invisível) -->
-    <input type="checkbox" name="botcheck" style="display:none">
+    <section id="atendimento">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Como funciona o atendimento</h2>
+          <p>Você sabe quais são as próximas etapas antes de autorizar o serviço.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <div class="step-number">1</div>
+            <h3>Entre em contato</h3>
+            <p>Conte pelo WhatsApp ou formulário qual é o equipamento e o problema apresentado.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number">2</div>
+            <h3>Avaliação e orçamento</h3>
+            <p>O equipamento é avaliado e as opções de serviço e custos são informadas para sua aprovação.</p>
+          </article>
+          <article class="process-step">
+            <div class="step-number">3</div>
+            <h3>Execução e testes</h3>
+            <p>Após a aprovação, o serviço é realizado e são feitos os testes pertinentes ao reparo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <!-- ===== Campos do formulário ===== -->
-    <div class="form-group">
-        <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+    <section class="contact-section" id="contato">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Fale com a Zetabyte</h2>
+          <p>Envie os detalhes do problema para iniciar seu pedido de orçamento.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Informações de contato</h3>
+            <div class="contact-detail">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div>
+                <strong>Endereço</strong>
+                <p>Rua Serra de Capivaruçú, 103<br>Jardim Elba — São Paulo, SP</p>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=Rua+Serra+de+Capivaru%C3%A7%C3%BA%2C+103%2C+Jardim+Elba%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener noreferrer">Ver no Google Maps</a></p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div><strong>Telefone / WhatsApp</strong><p><a href="https://wa.me/5511930870716" target="_blank" rel="noopener noreferrer">(11) 93087-0716</a></p></div>
+            </div>
+            <div class="contact-detail">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div><strong>E-mail</strong><p><a href="mailto:zetabyteinformatica@gmail.com">zetabyteinformatica@gmail.com</a></p></div>
+            </div>
+            <div class="contact-detail">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              <div><strong>Horário informado</strong><p>Segunda a sábado, das 8h às 18h</p></div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Solicitar orçamento</h3>
+            <p class="form-intro">Preencha os campos. Você poderá revisar a mensagem antes de enviá-la pelo WhatsApp.</p>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="nome">Seu nome</label>
+                <input class="form-control" type="text" id="nome" name="nome" autocomplete="name" maxlength="100" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Seu e-mail (opcional)</label>
+                <input class="form-control" type="email" id="email" name="email" autocomplete="email" maxlength="160">
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Descreva o problema</label>
+                <textarea class="form-control" id="mensagem" name="mensagem" maxlength="2000" required placeholder="Ex.: computador não liga, está lento ou precisa de upgrade."></textarea>
+              </div>
+              <button class="btn btn-green" type="submit" style="width:100%">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Continuar pelo WhatsApp
+              </button>
+              <p class="form-note">O botão abrirá o WhatsApp com a mensagem preenchida. Você ainda precisará tocar em Enviar no WhatsApp.</p>
+              <div class="form-status error" id="formStatus" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Zetabyte Informática</strong> — Assistência técnica em computadores</p>
+      <p class="footer-small">&copy; <span id="currentYear">2026</span> Zetabyte Informática. Todos os direitos reservados.</p>
     </div>
+  </footer>
 
-    <div class="form-group">
-        <input type="email" id="email" name="email" class="form-control" placeholder="Seu email" required>
-    </div>
+  <a class="whatsapp-float" href="https://wa.me/5511930870716?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Zetabyte pelo WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
-    <div class="form-group">
-        <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Descreva seu problema" required></textarea>
-    </div>
+  <script>
+    (function () {
+      const menuButton = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#site-nav');
 
-    <button type="submit" class="btn btn-primary" style="width:100%;">
-        Enviar Pedido
-    </button>
-</form>
+      function closeMenu() {
+        nav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Abrir menu');
+        menuButton.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        document.body.classList.remove('menu-open');
+      }
 
+      menuButton.addEventListener('click', function () {
+        const isOpen = nav.classList.toggle('open');
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+        menuButton.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+        menuButton.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+          : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        document.body.classList.toggle('menu-open', isOpen);
+      });
 
-    </div>
-</div>
-</section>
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
 
-<footer>
-<p>&copy; 2026 Zetabyte Informática - Todos os direitos reservados</p>
-</footer>
-<!-- Botão Flutuante WhatsApp -->
-<a href="https://wa.me/5511930870716?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Falar no WhatsApp">
-  &#x1F4AC; <!-- Ícone de balão de fala; pode substituir por um SVG -->
-</a>
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeMenu();
+      });
 
-<style>
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  color: #FFF;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: transform 0.2s;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  filter: brightness(0.95);
-}
-</style>
+      document.querySelector('#currentYear').textContent = new Date().getFullYear();
+
+      document.querySelector('#contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nome = document.querySelector('#nome').value.trim();
+        const email = document.querySelector('#email').value.trim();
+        const mensagem = document.querySelector('#mensagem').value.trim();
+        const status = document.querySelector('#formStatus');
+
+        if (!nome || !mensagem) {
+          status.textContent = 'Por favor, preencha seu nome e descreva o problema.';
+          status.className = 'form-status error visible';
+          return;
+        }
+
+        const texto = [
+          'Olá! Gostaria de solicitar um orçamento pela página da Zetabyte Informática.',
+          '',
+          'Nome: ' + nome,
+          email ? 'E-mail: ' + email : '',
+          'Problema / serviço: ' + mensagem
+        ].filter(Boolean).join('\n');
+
+        const url = 'https://wa.me/5511930870716?text=' + encodeURIComponent(texto);
+        const novaAba = window.open(url, '_blank', 'noopener,noreferrer');
+
+        status.textContent = novaAba
+          ? 'O WhatsApp foi aberto. Confira a mensagem e toque em Enviar para concluir.'
+          : 'Se o WhatsApp não abriu, use o botão flutuante ou permita a abertura de novas abas no navegador.';
+        status.className = 'form-status visible ' + (novaAba ? 'success' : 'error');
+      });
+    })();
+  </script>
 </body>
 </html>
